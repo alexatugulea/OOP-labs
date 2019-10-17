@@ -1,19 +1,14 @@
-package Java_Lab1;
-
 public class Student {
-    String name;
-    int age;
-    double mark;
+    private String name;
+    private String Age;
+    private double Grade;
 
-    public Student(String name, int age, double mark) {
+    public Student(String name, String Age, double Grade){
         this.name = name;
-        this.age = age;
-        this.mark = mark;
+        this.Age = Age;
+        this.Grade = Grade;
     }
-
-    public void showStudent() {
-        System.out.println("Student " + this.name
-                + " about " + this.age + " years old"
-                + " has an " + this.mark);
+    public double getGrade(){
+        return Grade;
     }
 }
