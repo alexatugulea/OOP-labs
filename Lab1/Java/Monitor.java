@@ -1,30 +1,24 @@
-package Java_Lab1;
+ public class Main {
 
-public class Monitor {
-    public String clr;
-    public int width;
-    public int height;
-    public String rls;
+    public static void main(String[] args){
+        Student Alexa = new Student( "Alexa","19", 10.0);
+        Student Ana = new Student("Ana","20",9.9);
+        Student Adriana = new Student( "Adriana",  "19",   9.8);
+        Student Adela = new Student( "Adela", "20", 9.7);
+        Student Alice = new Student("Alice","19", 9.6);
+        Student Amanda = new Student( "Amanda","20", 9.5);
 
-    public Monitor(String clr, int width, int height, String rls) {
-        this.clr = clr;
-        this.width = width;
-        this.height = height;
-        this.rls= rls;
+        Student[] International = {Ana, Adela, Adriana};
+        Student[] Technical     = {Alexa};
+        Student[] State         = {Alice, Amanda};
+        University ULIM = new University("ULIM","1992", International);
+        University TUM  = new University("TUM", "1964", Technical);
+        University USM =  new University("USM", "1946", State);
+
+        System.out.println("Media notelor la UNIVERSITATEA LIBERA INTERNATIONALA: "+ULIM.average());
+        System.out.println("Media notelor la UNIVERSITATEA TEHNICA A MOLDOVEI: "+TUM.average());
+        System.out.println("Media notelor la UNIVERSITATEA DE STAT A MOLDOVEI: "+USM.average());
+
+        System.out.println("Media notelor tuturor universitatilor: "+(ULIM.average()+TUM.average()+USM.average())/3);
     }
-
-    public void printCompareSize(Monitor monitor2) {
-        if (this.height * this.height > monitor2.height * monitor2.width) {
-            System.out.println("1st monitor bigger");
-        } else {
-            System.out.println("2nd monitor bigger");
-        }
-    }
-
-    public void showMonitor() {
-        System.out.println("Monitor with clr " + this.clr +
-                " width: " + this.width + " height: " + this.height +
-                " rls:" + this.rls);
-    }
-
 }
